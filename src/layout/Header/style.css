@@ -1,0 +1,26 @@
+.shoply-text{
+    color:var(--text);
+}
+.login-button{
+background-color: #211F1C;
+width: 113px;
+height: 40px;
+}
+.header-color{
+    background-color: #F8F8F8;
+}
+.home-menu{
+    position: relative;
+}
+.home-menu::after{
+
+    content: "";
+    width: 80%;
+    bottom: -10%;
+   
+left: 8%;
+
+    border-bottom: 1px solid black;
+    position: absolute;
+
+}
