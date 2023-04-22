@@ -1,0 +1,21 @@
+.paragrapgh-main{
+    width: 550px;
+}
+.login-button{
+    background-color: #211F1C;
+    width: 113px;
+    height: 40px;
+    }
+.mouseblack-size{
+    width: 400px;
+    margin-left: 1.4rem;
+}
+.titlemouse-color{
+    color:var(--text);
+
+}
+.backgroundButton-products{
+    background-color: var(--text);
+    width: 218px;
+    height: 54px;
+}

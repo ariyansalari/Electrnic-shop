@@ -1,4 +1,5 @@
 import { Headershop } from "@/assets";
+import { Buttons } from "@/components";
 import { login } from "@/routes";
 
 import  React  from "react";
@@ -16,7 +17,7 @@ export const Header = (proms:Iheader) => {
                <ul className="lg:flex md:flex sm:flex justify-between items-center ">
                 <li className="font-bold  lg:text-3xl md:text-2x1 sm:text-xl shoply-text p-6 ml-4 ">Shoply. </li>
                 <li className="flex gap-8 ">
-                    <div className="text-base sm:text-sm home-menu font-bold">Home</div>
+                    <div className="text-base sm:text-sm home-menu font-bold"><Link to="/">Home</Link></div>
                     <span className="sm:text-sm">/</span>
                     <div className="text-base sm:text-sm">Products</div>
                     <span className="sm:text-sm">/</span>
@@ -24,7 +25,7 @@ export const Header = (proms:Iheader) => {
                 </li>
                 <li className="flex gap-10">
                     <div className="lg:w-9 md:w-4 sm:w-1">{<Headershop/>}</div>
-                    <button className=" text-white flex justify-center items-center login-button me-10"><Link to={login}>Login</Link></button> 
+                <Link to="/Login"><Buttons className=" text-white flex justify-center items-center login-button me-10" text="Login" /></Link>
                 </li>
                </ul> 
             </nav>
