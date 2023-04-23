@@ -1,5 +1,8 @@
-import { RightArrow } from "@/assets";
+import {  RightArrow} from "@/assets";
 import { Buttons } from "@/components";
+import { Card } from "@/components/Card";
+import { Cards } from "@/routes/products";
+import { Link } from "react-router-dom";
 import "./style.css"
 export const HomeScrenn = () => {
     return ( 
@@ -12,8 +15,8 @@ export const HomeScrenn = () => {
                 <p className="text-2xl paragrapgh-main mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh erat</p>
                 <Buttons className="login-button text-white mt-12 " text="Shop Now "/>
             </div>
-            <div className="mouseblack-size flex justify-end mt-20">
-               <img className="" src="../../public/Photo/mouseblack.png" alt="" />
+            <div className="mouseblack-size mt-20">
+               <img className="" src="../../public/Photo/Body/mouseblack.png" alt="" />
             </div>
         </div>
             {/*  */}
@@ -24,37 +27,70 @@ export const HomeScrenn = () => {
                 </div>
             <div>
                 <div>
-                    <div className="flex justify-center gap-28">
-                        <img src="../../public/Photo/morgan.png" alt="" />
-                        <img src="../../public/Photo/oysho.png" alt="" />
-                        <img src="../../public/Photo/pull-bear.png" alt="" />
-                        <img src="../../public/Photo/rosewood.png" alt="" />
+                    <div className="flex justify-center gap-28 mb-28">
+                        <img src="../../public/Photo/Body/morgan.png" alt="" />
+                        <img src="../../public/Photo/Body/oysho.png" alt="" />
+                        <img src="../../public/Photo/Body/pull-bear.png" alt="" />
+                        <img src="../../public/Photo/Body/rosewood.png" alt="" />
                     </div>
                 </div>
             </div>
             {/*  */}
-
+<div style={{backgroundColor:"#F8F8F8"}} className="pb-16">
                <div className="flex justify-center">
-                <h1 className="text-5xl	font-bold mb-20 mt-44" style={{color:"var(--text)"}}>Product</h1>
+                <h1 className="text-5xl	font-bold mb-20 mt-14" style={{color:"var(--text)"}}>Product</h1>
                </div>
             <div className="grid grid-cols-4  ml-10">
-           <div><img src="../../public/Photo/products/Rectangle 103.png" alt="" /></div>
-           <div><img src="../../public/Photo/products/Rectangle 104.png" alt="" /></div>
-           <div><img src="../../public/Photo/products/Rectangle 105.png" alt="" /></div>
-           <div><img src="../../public/Photo/products/Rectangle 106.png" alt="" /></div>
-           <div className="mt-11"><img src="../../public/Photo/products/Rectangle 107.png" alt="" /></div>
-           <div className="mt-11"><img src="../../public/Photo/products/Rectangle 108.png" alt="" /></div>
-           <div className="mt-11"><img src="../../public/Photo/products/Rectangle 109.png" alt="" /></div>
-           <div className="mt-11"><img src="../../public/Photo/products/Rectangle 110.png" alt="" /></div>
+          {Cards.map((i)=>(
+            <Card key={i.src} className={i.classname} src={i.src} />
+          ))}
             </div>
             {/* all products butoon */}
-            <div className="flex backgroundButton-products justify-center items-center rounded-sm mx-auto mt-16" >
-                <Buttons className="text-white" text="All Product" />
+            <div className="flex backgroundButton-products justify-center items-center rounded-sm mx-auto mt-16 " >
+                <Link to="/Products"><Buttons className="text-white " text="All Product" /></Link>
                 <image className="ml-1.5">{<RightArrow fill="white"/>}</image>
+            </div>
+
             </div>
             {/*  */}
 
+{/* BEst */}
+<h1 className="text-5xl	font-bold flex justify-center mt-36 m-32">Benefits Using Our Service</h1>
 
+<div className="flex justify-center gap-20">
+    <div className="flex flex-col items-center" >
+        <img src="../../public/Photo/Body/Quality.png" alt="" />
+        <h1>Best Quality</h1>
+        <p className="w-72 text-xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur, purus id </p>
+    </div>
+    <div  className="flex flex-col items-center">
+    <img src="../../public/Photo/Body/Freeshoping.png" alt="" />
+    <h1>Free Shipping</h1>
+    <p className="w-72 text-xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur, purus id </p>
+    </div>
+    <div  className="flex flex-col items-center">
+    <img src="../../public/Photo/Body/Waranty.png" alt="" />
+    <h1>Warranty</h1>
+    <p className="w-72 text-xl text-center" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur, purus id </p>
+    </div>
+</div>
+{/*  */}
+
+<div style={{backgroundColor:"#F8F8F8"}} className="pt-24 mt-16">
+    <h1 className="text-5xl	 font-bold flex justify-center mb-24">What Our Costumers Are Saying</h1>
+
+    <div className="flex pb-36" >
+        <div>
+            <img className="ml-44" src="../../public/Photo/Body/purple-women.png" alt="" />
+        </div>
+        <div className="ml-60">
+            <h1 className="text-4xl	font-old mb-12">Help us Improve our productivity</h1>
+            <p className="w-3/6  leading-7	">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur, purus id tincidunt feugiat, metus orci sagittis elit, quis tempor orci elit id arcu. Proin egestas bibendum efficitur. </p>
+            <h1 className="text-2xl	font-bold mt-10">Adriana Lopez</h1>
+            <p className="text-xl">Client</p>
+        </div>
+    </div>
+</div>
       </div>
      );
 }
