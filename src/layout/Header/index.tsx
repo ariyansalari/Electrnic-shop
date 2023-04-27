@@ -1,7 +1,7 @@
 import { Headershop } from "@/assets";
 import { Buttons } from "@/components";
 import { Modal } from "@/components";
-import { login } from "@/routes";
+import { about, login, products } from "@/routes";
 
 import  React, { useState }  from "react";
 import { Link } from "react-router-dom";
@@ -22,13 +22,13 @@ export const Header = (proms:Iheader) => {
                 <li className="flex gap-8 ">
                     <div className="text-base sm:text-sm home-menu font-bold"><Link to="/">Home</Link></div>
                     <span className="sm:text-sm">/</span>
-                    <div className="text-base sm:text-sm">Products</div>
+                    <div className="text-base sm:text-sm"><Link to={products}>Products</Link></div>
                     <span className="sm:text-sm">/</span>
-                    <div className="text-base sm:text-sm">About</div>
+                    <div className="text-base sm:text-sm"><Link to={about}>About</Link></div>
                 </li>
                 <li className="flex gap-10">
                     <div className="lg:w-9 md:w-4 sm:w-1">{<Headershop/>}</div>
-                <Link to="/"><Buttons className=" text-white flex justify-center items-center login-button me-10" text="Login" onClick={()=>setOpenModal(true)} /></Link>
+                <Buttons className=" text-white flex justify-center items-center login-button me-10" text="Login" onClick={()=>setOpenModal(true)} />
                 <Modal open={openModal} Onclose={()=>setOpenModal(false)}/>
                 </li>
                </ul> 

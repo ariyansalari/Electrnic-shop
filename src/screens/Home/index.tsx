@@ -1,6 +1,7 @@
 import {  RightArrow} from "@/assets";
 import { Buttons } from "@/components";
 import { Card } from "@/components/Card";
+import { products } from "@/routes";
 import { Cards } from "@/routes/products";
 import { Link } from "react-router-dom";
 import "./style.css"
@@ -47,7 +48,7 @@ export const HomeScrenn = () => {
             </div>
             {/* all products butoon */}
             <div className="flex backgroundButton-products justify-center items-center rounded-sm mx-auto mt-16 " >
-                <Link to="/Products"><Buttons className="text-white " text="All Product" /></Link>
+                <Link to={products}><Buttons className="text-white " text="All Product" /></Link>
                 <image className="ml-1.5">{<RightArrow fill="white"/>}</image>
             </div>
 
