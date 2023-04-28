@@ -7,3 +7,6 @@ export { ReactComponent as RightArrow } from './svgs/right-arrow.svg';
 export { ReactComponent as User } from './svgs/user.svg';
 export { ReactComponent as Lock } from './svgs/Lock.svg';
 export { ReactComponent as Shops } from './svgs/Shops.svg';
+export { ReactComponent as Search } from './svgs/search.svg';
+export { ReactComponent as ButtomArrow } from './svgs/Bottomarrow.svg';
+

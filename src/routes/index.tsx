@@ -1,6 +1,5 @@
 import { HomeScrenn,Login } from "@/screens";
-import { About } from "@/screens/About";
-import { Products } from "@/screens/Products";
+import { About,Products,Mycart } from "@/screens";
 import { ReactElement } from "react";
 
 interface router{
@@ -12,6 +11,7 @@ export const home="/"
 export const login="/Login"
 export const about="/About"
 export const products="/Products"
+export const mycart="/MyCart"
 
 export const routes:router[]=[
     {
@@ -29,5 +29,10 @@ export const routes:router[]=[
     {
         element:<Products/>,
         path:products
+    },
+    {
+        element:<Mycart/>,
+        path:mycart
+
     }
 ]

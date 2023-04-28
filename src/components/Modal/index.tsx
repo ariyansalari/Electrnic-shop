@@ -7,7 +7,7 @@ export const Modal = ({open,Onclose}:any) => {
     return ( 
         <div className="overlay">
            <Textfield varient="Login" className="loginmodal-btn" src="../../public/Photo/Login/LoginImage.png"/> 
-           <p onClick={Onclose} className="absolute right-48 top-2 p-4">X</p>
+           <p onClick={Onclose} className="absolute right-1/4 top-40 p-4">X</p>
          
         </div>
      );

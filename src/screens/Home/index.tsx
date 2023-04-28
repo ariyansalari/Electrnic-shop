@@ -1,6 +1,6 @@
 import {  RightArrow} from "@/assets";
 import { Buttons } from "@/components";
-import { Card } from "@/components/Card";
+import { Card } from "@/components";
 import { products } from "@/routes";
 import { Cards } from "@/routes/products";
 import { Link } from "react-router-dom";
