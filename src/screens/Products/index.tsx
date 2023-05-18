@@ -5,10 +5,9 @@ import { Todotype } from "@/types";
 import { useState } from "react";
 import "./style.css"
 export const Products = () => {
-    const [Addcart,setAddcart]=useState([])
 
     return (
-        <div className="container mt-14 ">
+        <div className="container mt-14 mx-auto">
         <div className="flex rounded-lg  items-center gap-4 mb-12" style={{boxShadow:"0 6px 10px 0 ",height:"74px"}}>
 <h1 className="text-3xl ml-6">Home</h1>
 <span className="text-3xl">{">"}</span>

@@ -1,16 +1,16 @@
 import { ReactElement } from "react";
+import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer/index";
 import { Header } from "./Header/index";
 
-interface Ichildren{
-    children:ReactElement;
-}
-
-export const Layout = ({children}:Ichildren) => {
+export const Layout = () => {
     return ( 
         <>
         <Header></Header>
-        <main className="container w-screen mx-auto">{children}</main>
+        <div>
+
+        <Outlet />
+        </div>
         <Footer></Footer>
         </>
      );

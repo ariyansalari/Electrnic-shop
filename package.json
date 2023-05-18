@@ -9,15 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.1.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.1",
+    "@mui/styled-engine-sc": "^5.12.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons-kit": "^2.0.0",
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.2",
     "sort-by": "^0.0.2",
+    "styled-components": "^5.3.10",
     "vite-plugin-svgr": "^2.4.0",
-    "vite-tsconfig-paths": "^4.2.0"
+    "vite-tsconfig-paths": "^4.2.0",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

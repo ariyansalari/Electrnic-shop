@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "./style.css"
 export const HomeScrenn = () => {
     return ( 
-      <div className="container">
+      <div className="container mx-auto ">
 
         {/* title */}
         <div className="flex">

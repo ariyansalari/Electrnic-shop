@@ -1,11 +1,47 @@
+import React, { Children } from "react";
 import  ReactDOM  from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { App } from "./App";
-const root=ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "./layout";
+import { about, home, login, mycart, products } from "./routes";
+import { About, HomeScrenn, Login, Mycart, Products } from "./screens";
 
-root.render(
-    <BrowserRouter>
+export const routes=createBrowserRouter([
+    {
+        path:"/",
+        element:<Layout/>,
+        children:[
 
-<App/>
-    </BrowserRouter>
-)
+            {
+                element:<HomeScrenn/>,
+                path:home,
+            },
+            {
+                element:<Login/>,
+                path:login,
+            },
+            {
+                element:<About/>,
+                path:about,
+            },
+            {
+                element:<Products/>,
+                path:products,
+            },
+            {
+                element:<Mycart/>,
+                path:mycart
+        
+            },
+        ]
+    },
+
+    
+ 
+])
+
+
+    ReactDOM.createRoot(document.getElementById("root")as HTMLElement).render(
+        <React.StrictMode>
+          <RouterProvider router={routes} />
+        </React.StrictMode>
+    )
