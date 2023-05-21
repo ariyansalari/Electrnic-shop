@@ -24,7 +24,9 @@ handlelogin,
         <Box component={"div"}>
             <h2 className="text-3xl  font-bold text-center mt-16">Login</h2>
 <form onSubmit={handleSubmit(handlelogin)} className="ml-16">
-<TextField
+  <div className="w-80 flex">
+  <TextField
+  className="flex grow"
 {...register("email")}
 error={Boolean(errors.email?.message)}
 helperText={errors.email?.message}
@@ -35,7 +37,11 @@ helperText={errors.email?.message}
             startAdornment: <InputAdornment position="start"><PersonIcon/></InputAdornment>,
           }}
         />
-         <TextField
+  </div>
+
+        <div className="w-80 flex">
+        <TextField
+         className="flex grow "  
          error={Boolean(errors.password?.message)}
          helperText={errors.password?.message}
          {...register("password")}
@@ -46,12 +52,16 @@ helperText={errors.email?.message}
             startAdornment: <InputAdornment position="start"><HttpsIcon/></InputAdornment>,
           }}
         />
+        </div>
+  
 
-        <div>
+        <div className="w-80">
             <a href="" className="flex justify-end">lupa password?</a>
         </div>
+<div  className="w-80 flex">
+<Button className="flex grow button" variant="contained" type="submit">Masuk</Button>
 
-        <Button variant="contained" type="submit" className="button">Masuk</Button>
+</div>
 
         <div>
             <p>belum punya akun ? <a>daftar sekarang</a></p>
